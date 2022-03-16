@@ -1,0 +1,1 @@
+export { default as CovidApi } from './get-api';
