@@ -1,4 +1,6 @@
 import DataTable from 'react-data-table-component';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const columns = [
     {
@@ -28,14 +30,25 @@ const columns = [
     },
 ];
 
-function MyComponent(data) {
+function Table(data) {
+    const [response, setResponse] = useState([]);
+    const [pending, setPending] = React.useState(true);
+  
+    useEffect(() => {
+
+        axios.get('https://apicovid19indonesia-v2.vercel.app/api/indonesia/provinsi')
+            .then(response => setResponse(response.data)).then(setPending(false));
+    }, []);
+
     return (
         <DataTable
-            title="Desserts - Cell Styling"
+            title="Total 32 Provinsi"
             columns={columns}
-            data={data.data} 
+            data={response} 
+            progressPending={pending}
+            allowOverflow={true}
         />
     );
 };
 
-export default MyComponent;
+export default Table;
