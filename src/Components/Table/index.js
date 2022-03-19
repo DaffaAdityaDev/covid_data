@@ -1,6 +1,8 @@
 import DataTable from 'react-data-table-component';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Text, Link, } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 const columns = [
     {
@@ -30,7 +32,7 @@ const columns = [
     },
 ];
 
-function Table(data) {
+function Table() {
     const [response, setResponse] = useState([]);
     const [pending, setPending] = React.useState(true);
   
@@ -41,13 +43,19 @@ function Table(data) {
     }, []);
 
     return (
-        <DataTable
-            title="Total 32 Provinsi"
-            columns={columns}
-            data={response} 
-            progressPending={pending}
-            allowOverflow={true}
-        />
+        <>
+            <Text mt="50px" fontSize='2xl'>Raporan kasus dan kematian berdasarkan berbagai Provinsi.</Text>
+                <Text>Virus COVID-19 telah menyebar ke 32 provinsi diseluruh indonesia 
+                <Link color='#0000EE' href='https://covid19.go.id/' isExternal> untuk data lebih lanjut dan terbaru<ExternalLinkIcon mx='2px' /></Link>
+            </Text>
+            <DataTable
+                title="Total 32 Provinsi"
+                columns={columns}
+                data={response} 
+                progressPending={pending}
+                allowOverflow={true}
+            />
+        </>
     );
 };
 

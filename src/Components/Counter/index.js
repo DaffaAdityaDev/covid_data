@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-import {  Wrap, Text, Heading, Link, Box, Center } from '@chakra-ui/react';
-import { ExternalLinkIcon } from '@chakra-ui/icons'
+import {  Wrap, Text, Heading, Box, Center } from '@chakra-ui/react';
 
 
 const Counter = () => {
@@ -11,13 +10,12 @@ const Counter = () => {
 
     const fontColor = "#fff"
 
-    useEffect(() => {
+    const API_URL = 'https://apicovid19indonesia-v2.vercel.app/api/indonesia/more';
 
-        axios.get('https://apicovid19indonesia-v2.vercel.app/api/indonesia/more')
+    useEffect(() => {
+        axios.get(API_URL)
         .then(response => setResponse(response.data));
     }, []);
-
-    console.log(response)
     
 
   return (
@@ -56,12 +54,6 @@ const Counter = () => {
                         </Box>
                     </Wrap>
                 </Center>
-                
-
-                <Text mb="50px" fontSize='2xl'>Raporan kasus dan kematian berdasarkan berbagai Provinsi.</Text>
-                <Text>Virus COVID-19 telah menyebar ke 32 provinsi diseluruh indonesia 
-                    <Link color='#0000EE' href='https://covid19.go.id/' isExternal> untuk data lebih lanjut dan terbaru<ExternalLinkIcon mx='2px' /></Link>
-                </Text>
             </>
         }
     </> 
