@@ -1,6 +1,6 @@
 # Next dumy netflix
 ![alt text](/public/Capture.JPG)
-Netflix slider and searchbar, recreated using react with hooks, powered by [Movie Database API](https://www.themoviedb.org/?language=en-US).
+Data Covid-19 in indonesia, powered by [Covid-19 API](https://apicovid19indonesia-v2.vercel.app/api).
 [Demo link](https://netflixdumy.netlify.app/)
 
 ## Features
