@@ -1,7 +1,7 @@
 # Next dumy netflix
 ![alt text](/public/Capture.JPG)
 Data Covid-19 in indonesia, powered by [Covid-19 API](https://apicovid19indonesia-v2.vercel.app/api).
-[Demo link](https://netflixdumy.netlify.app/)
+[Demo link](https://covid-19-data-indonesia.netlify.app/)
 
 ## Features
  - Total positive case
@@ -12,17 +12,20 @@ Data Covid-19 in indonesia, powered by [Covid-19 API](https://apicovid19indonesi
 ### General information
 
 In this project i try to provide current data of covid-19 in indonesia and 32 province.
-Thanks to Reynadi Who provide API
+Thanks to Reynadi, Who provide [API](https://github.com/farizdotid/DAFTAR-API-LOKAL-INDONESIA)
 
-There might be things broken in other web browsers, tested only on Chrome.
-
+## Technology
+- React 
+- Chakra Ui
+- React data table component
+- Public API
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run start
+npm install && run start 
 # or
 yarn start
 ## and ##
