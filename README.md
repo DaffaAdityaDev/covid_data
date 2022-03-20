@@ -1,4 +1,4 @@
-# Next dumy netflix
+# Covid_data
 ![alt text](/public/Capture.JPG)
 Data Covid-19 in indonesia, powered by [Covid-19 API](https://apicovid19indonesia-v2.vercel.app/api).
 [Demo link](https://covid-19-data-indonesia.netlify.app/)
