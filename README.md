@@ -8,7 +8,7 @@ Data Covid-19 in indonesia, powered by [Covid-19 API](https://apicovid19indonesi
  - case of confirm, Active, Recovered, Death
  - 1st & 2nd vaccinated Counter
  - A table of 32 Province in indonesia Covid data
-
+ 
 ### General information
 
 In this project i try to provide current data of covid-19 in indonesia and 32 province.
